@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const Book_1 = require("./routes/Book");
+const Book_1 = require("../routes/Book");
 class App {
     constructor() {
         this.routePrv = new Book_1.BookRoutes();

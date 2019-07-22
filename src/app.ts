@@ -1,15 +1,17 @@
 import * as express from 'express'
 import * as bodyParser from 'body-parser'
 import * as mongoose from 'mongoose'
+
+import { BookRoutes } from './routes/Book';
 class App {
   public app: express.Application
-  // public routePrv: Routes = new Routes()
+  public routePrv: BookRoutes = new BookRoutes()
   public mongoUrl: string = 'mongodb://127.0.0.1:27017/books'
 
   constructor () {
     this.app = express()
     this.config()
-    // this.routePrv.routes(this.app)
+    this.routePrv.routes(this.app)
     this.mongoSetup()
   }
 
