@@ -1,8 +1,6 @@
 import * as express from 'express'
 import * as bodyParser from 'body-parser'
 import * as mongoose from 'mongoose'
-import { runInThisContext } from 'vm';
-
 class App {
   public app: express.Application
   // public routePrv: Routes = new Routes()
